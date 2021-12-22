@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import HeaderBar from './components/headerBar/HeaderBar';
+import ChatBotComponent from './components/chatBot/ChatBot';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderBar />
+      <br /><br />
+
+      <main style={{ padding: '0 5%' }}>
+        <div className='skeleton-container'>
+          <h1><Skeleton /></h1>
+          <Skeleton count={10} />
+
+          <h1><Skeleton /></h1>
+          <Skeleton count={10} />
+        </div>
+
+        {/* Componente del chat bot */}
+        <ChatBotComponent />
+      </main>
     </div>
   );
 }

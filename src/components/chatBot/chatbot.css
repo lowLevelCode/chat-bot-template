@@ -1,0 +1,7 @@
+.chat-button {
+    position: fixed;
+    background-color: red;    
+    top:84%;
+    left:90%;
+    z-index: 1000;
+}
